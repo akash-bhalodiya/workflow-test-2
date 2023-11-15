@@ -1,5 +1,6 @@
 name: test workflow
-on: 
+
+on:
   workflow_dispatch:
 
 jobs:
@@ -11,12 +12,9 @@ jobs:
         shell: pwsh
 
       - name: setup-node
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      
-      - name: node-version
+
+      - name: Display Node.js version
         run: node -v
-        shell: bash
