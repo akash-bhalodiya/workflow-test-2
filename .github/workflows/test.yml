@@ -9,5 +9,15 @@ jobs:
       - name: say-hello-world
         run: echo "hello world"
         shell: pwsh
+
+      - name: setup-node
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+        run: node -v
+        shell: bash
     
+    
+      
   
