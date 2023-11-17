@@ -18,3 +18,8 @@ jobs:
 
       - name: Display Node.js version
         run: node -v
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
